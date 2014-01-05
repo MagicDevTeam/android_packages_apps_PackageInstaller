@@ -554,7 +554,7 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
         ApplicationInfo sourceInfo = getSourceInfo();
         if (sourceInfo != null) {
             if (uidFromIntent != VerificationParams.NO_UID &&
-                    (mSourceInfo.flags & ApplicationInfo.FLAG_PRIVILEGED) != 0) {
+                    (sourceInfo.flags & ApplicationInfo.FLAG_PRIVILEGED) != 0) {
                 return uidFromIntent;
 
             }
